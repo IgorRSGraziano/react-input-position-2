@@ -1,11 +1,11 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ESLintPlugin = require('eslint-webpack-plugin');
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: path.join(__dirname, "examples/src/index.html"),
   filename: "./index.html",
   favicon: "./examples/src/favicon.ico"
 });
-
 module.exports = {
   entry: path.join(__dirname, "examples/src/index.js"),
   output: {
@@ -16,7 +16,7 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: ["babel-loader", "eslint-loader"],
+        use: ["babel-loader"],
         exclude: /node_modules/
       },
       {
@@ -29,7 +29,7 @@ module.exports = {
       }
     ]
   },
-  plugins: [htmlWebpackPlugin],
+  plugins: [htmlWebpackPlugin, new ESLintPlugin()],
   resolve: {
     extensions: [".js", ".jsx"]
   },
