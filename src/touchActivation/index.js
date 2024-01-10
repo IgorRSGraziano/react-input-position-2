@@ -1,11 +1,4 @@
-import doubleTap from "./doubleTap";
-import longTouch from "./longTouch";
-import tap from "./tap";
-import touch from "./touch";
-
-export default {
-  doubleTap,
-  longTouch,
-  tap,
-  touch
-};
+export { default as doubleTap } from "./doubleTap";
+export { default as longTouch } from "./longTouch";
+export { default as tap } from "./tap";
+export { default as touch } from "./touch";

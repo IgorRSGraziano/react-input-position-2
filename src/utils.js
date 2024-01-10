@@ -150,7 +150,7 @@ function centerItemOnPosition(
   return itemPosition;
 }
 
-export default {
+const utils = {
   decorateChildren,
   preventDefault,
   convertRange,
@@ -159,4 +159,6 @@ export default {
   calculateItemPosition,
   alignItemOnPosition,
   centerItemOnPosition
-};
+}
+
+export default utils;

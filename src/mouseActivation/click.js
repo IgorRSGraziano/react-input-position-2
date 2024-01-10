@@ -35,10 +35,12 @@ function mouseLeave() {
   this.mouseDown = false;
 }
 
-export default {
+const click = {
   mouseDown,
   mouseUp,
   mouseMove,
   mouseLeave,
   dragStart: utils.preventDefault
-};
+}
+
+export default click;

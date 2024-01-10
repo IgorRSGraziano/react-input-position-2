@@ -28,11 +28,13 @@ function mouseLeave() {
   this.mouseDown = false;
 }
 
-export default {
+const hover = {
   mouseDown,
   mouseUp,
   mouseMove,
   mouseEnter,
   mouseLeave,
   dragStart: utils.preventDefault
-};
+}
+
+export default hover;

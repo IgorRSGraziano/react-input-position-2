@@ -1,6 +1,6 @@
 import utils from "../utils";
 
-function mouseDown(e) {
+function handleMouseDown(e) {
   const position = { x: e.clientX, y: e.clientY };
   this.activate(position);
 }
@@ -55,11 +55,12 @@ function addRemoveOutsideHandlers(add) {
     });
 }
 
-export default {
-  mouseDown,
+const mouseDown = {
+  mouseDown: handleMouseDown,
   mouseUp,
   mouseMove,
   mouseLeave,
   mouseEnter,
   dragStart: utils.preventDefault
 };
+export default mouseDown

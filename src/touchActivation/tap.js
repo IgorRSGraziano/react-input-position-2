@@ -37,9 +37,11 @@ function touchCancel() {
   this.deactivate();
 }
 
-export default {
+const tap = {
   touchStart,
   touchEnd,
   touchMove,
   touchCancel
-};
+}
+
+export default tap;

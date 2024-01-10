@@ -38,9 +38,12 @@ function touchCancel() {
   this.deactivate();
 }
 
-export default {
+const longTouch = {
   touchStart,
   touchEnd,
   touchMove,
   touchCancel
 };
+
+
+export default longTouch

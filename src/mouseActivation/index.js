@@ -1,11 +1,4 @@
-import click from "./click";
-import doubleClick from "./doubleClick";
-import hover from "./hover";
-import mouseDown from "./mouseDown";
-
-export default {
-  click,
-  doubleClick,
-  hover,
-  mouseDown
-};
+export { default as click } from "./click";
+export { default as doubleClick } from "./doubleClick";
+export { default as hover } from "./hover";
+export { default as mouseDown } from "./mouseDown";

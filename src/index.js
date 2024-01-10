@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import mouseActivation from "./mouseActivation";
-import touchActivation from "./touchActivation";
+import * as mouseActivation from "./mouseActivation";
+import * as touchActivation from "./touchActivation";
 import { MOUSE_ACTIVATION, TOUCH_ACTIVATION } from "./constants";
 import utils from "./utils";
 
@@ -133,7 +133,7 @@ class ReactInputPosition extends Component {
       });
       window.addEventListener("testPassive", null, options);
       window.removeEventListener("testPassive", null, options);
-    } catch (e) {}
+    } catch (e) { }
   }
 
   updateState(changes, cb) {
